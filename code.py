@@ -269,3 +269,58 @@ class TestCap(unittest.TestCase):
 
 if __name__ =='__main__':
     unittest.main()
+
+def gen(N):
+    for i in range(N):
+        yield i**2
+
+#generator
+for x in gen(10):
+    print(x)
+
+
+# iter() function
+s = 'Hey Girl'
+tap = iter(s)
+
+print(next(tap))
+
+my_list = [1,2,3,4,5,6,7,8,9,10]
+
+#not stored in memory
+gen2 = (item for item in my_list if item > 3)
+
+for item in gen2:
+    print(item)
+
+from collections import Counter
+
+mylist = [1,2,3,4,5,5,6,7,8,8,9,9,10]
+
+print(Counter(mylist))
+
+sentence = 'Hey there what are you doing today are you sure?'
+
+a = sentence.split()
+
+print(a)
+
+print(Counter(a))
+
+from collections import Counter
+
+f = open('test_file.txt','w+')
+
+f.write('Hello World, bro bro bro')
+
+f.close()
+
+import os
+
+print(os.listdir())
+print(os.getcwd())
+
+import shutil
+
+shutil.move('test_file.txt','C:\Users\fatsa\OneDrive\Documents\Python')
+
